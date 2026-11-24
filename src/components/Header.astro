@@ -1,0 +1,12 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+<header style="background:#1e3a8a;color:#fff;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+  <a href={base} style="color:#ffffff;text-decoration:none;font-weight:bold;font-size:1.25rem;">Academia</a>
+  <nav style="display:flex;gap:1.25rem;flex-wrap:wrap;">
+    <a href={base} style="color:#fff;text-decoration:none;">Inicio</a>
+    <a href={`${base}quienes-somos/`} style="color:#fff;text-decoration:none;">Quiénes Somos</a>
+    <a href={`${base}servicios/`} style="color:#fff;text-decoration:none;">Servicios</a>
+    <a href={`${base}blog/`} style="color:#fff;text-decoration:none;">Blog</a>
+  </nav>
+</header>

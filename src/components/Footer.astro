@@ -1,0 +1,12 @@
+---
+const base = import.meta.env.BASE_URL;
+const whatsappUrl = "https://wa.me/34600000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20la%20academia";
+---
+<footer style="background:#0f172a;color:#cbd5e1;padding:2rem;margin-top:3rem;text-align:center;">
+  <p style="margin:0 0 0.75rem 0;font-weight:bold;color:#fff;">Academia</p>
+  <p style="margin:0 0 1rem 0;">© 2026 Academia | Aviso legal | Privacidad | Contacto</p>
+  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;background:#22c55e;color:#fff;padding:0.6rem 1.2rem;border-radius:6px;text-decoration:none;font-weight:bold;">
+    <img src={`${base}images/whatsapp-icon.png`} alt="WhatsApp" width="20" height="20" />
+    Consultar por WhatsApp
+  </a>
+</footer>

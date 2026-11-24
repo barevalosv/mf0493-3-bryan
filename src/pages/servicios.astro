@@ -1,17 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const whatsappUrl = "https://wa.me/34600000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20la%20academia";
 ---
-
-<BaseLayout
-  title="TODO: título SEO de la página de servicios"
-  description="TODO: meta descripción de la página de servicios."
->
-  <h1>TODO: título de la página de información</h1>
-  <p>TODO: explica los servicios, la actividad o las características del proyecto.</p>
-
-  <h2>TODO: primer servicio o característica</h2>
-  <p>TODO: describe este servicio.</p>
-
-  <h2>TODO: segundo servicio o característica</h2>
-  <p>TODO: describe este servicio.</p>
+<BaseLayout title="Servicios | Academia" description="Descubre nuestra oferta formativa: cursos, talleres intensivos y clases de refuerzo.">
+  <h1>Servicios</h1>
+  <ul>
+    <li><strong>Apoyo escolar y universitario:</strong> Resolución de dudas, técnicas de estudio y seguimiento semanal.</li>
+    <li><strong>Cursos intensivos:</strong> Preparación enfocada en convocatorias, exámenes y habilidades clave.</li>
+    <li><strong>Talleres prácticos:</strong> Sesiones cortas sobre organización, productividad y herramientas digitales.</li>
+  </ul>
+  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:1rem;background:#22c55e;color:#fff;padding:0.7rem 1.2rem;border-radius:6px;text-decoration:none;">Consultar plazas por WhatsApp</a>
 </BaseLayout>

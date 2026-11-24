@@ -1,35 +1,32 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-
-// BASE_URL es '/' en local y '/nombre-repo/' al publicar en GitHub Pages.
 const base = import.meta.env.BASE_URL;
 
-// Índice automático del blog: añade un objeto por cada artículo.
-// Si cambias el título de un artículo, actualízalo también aquí.
-// Las rutas se escriben sin la barra inicial: se les añade BASE_URL al renderizar.
-const articulos = [
+const posts = [
   {
-    title: 'TODO: título del artículo 1',
-    href: 'blog/articulo-1/',
-    description: 'TODO: resumen breve del artículo 1.',
+    title: "Cómo estudiar mejor",
+    description: "Técnicas y hábitos para aprovechar tu tiempo.",
+    image: `${base}images/blog1.jpg`,
+    href: `${base}blog/articulo-1/`
   },
   {
-    title: 'TODO: título del artículo 2',
-    href: 'blog/articulo-2/',
-    description: 'TODO: resumen breve del artículo 2.',
-  },
+    title: "Consejos para aprobar tus exámenes",
+    description: "Estrategias prácticas para estudiar y organizarte.",
+    image: `${base}images/blog3.jpg`,
+    href: `${base}blog/articulo-2/`
+  }
 ];
 ---
-
-<BaseLayout title="Blog | TODO: nombre de la empresa" description="TODO: meta descripción de la página del blog">
-  <h1>TODO: título del blog</h1>
-
-  <ul>
-    {articulos.map((articulo) => (
-      <li>
-        <a href={`${base}${articulo.href}`}>{articulo.title}</a>
-        <p>{articulo.description}</p>
-      </li>
+<BaseLayout title="Blog | Academia" description="Artículos con consejos de estudio, organización y formación continua.">
+  <h1>Blog de la Academia</h1>
+  <div style="display:grid;gap:1.5rem;">
+    {posts.map((post) => (
+      <article style="background:#fff;padding:1.5rem;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+        <img src={post.image} alt={post.title} style="width:100%;max-height:240px;object-fit:cover;border-radius:8px;margin-bottom:1rem;" />
+        <h2><a href={post.href} style="color:#1e3a8a;text-decoration:none;">{post.title}</a></h2>
+        <p style="color:#475569;font-weight:600;">{post.description}</p>
+        <p><a href={post.href} style="color:#1e3a8a;">Leer artículo</a></p>
+      </article>
     ))}
-  </ul>
+  </div>
 </BaseLayout>

@@ -1,22 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
+const whatsappUrl = "https://wa.me/34600000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20la%20academia";
 ---
-
-<BaseLayout
-  title="TODO: título SEO descriptivo de la página de inicio"
-  description="TODO: meta descripción de unas 150 caracteres que resuma el contenido."
->
-  <h1>TODO: título principal de la web</h1>
-  <p>TODO: breve presentación del proyecto.</p>
-
-  <img
-    src={`${base}images/ejemplo.svg`}
-    alt="TODO: describe con precisión qué muestra la imagen"
-    width="640"
-    height="360"
-  />
-
-  <h2>Lo que ofrecemos</h2>
-  <p>TODO: texto relacionado con la temática elegida.</p>
+<BaseLayout title="Academia | Formación de calidad para tu futuro" description="Aprende con cursos prácticos, apoyo académico y formación continua en nuestra academia.">
+  <section style="background:#fff;padding:2rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+    <img src={`${base}images/hero.jpg`} alt="Nuestra Academia" style="width:100%;max-height:360px;object-fit:cover;border-radius:8px;margin-bottom:1.5rem;" />
+    <h1>Nuestra Academia</h1>
+    <p>Formación práctica y cercana para impulsar tu rendimiento académico y tu crecimiento profesional.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.25rem;">
+      <a href={`${base}servicios/`} style="background:#1e3a8a;color:#fff;padding:0.7rem 1.25rem;border-radius:6px;text-decoration:none;">Ver cursos y talleres</a>
+      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" style="background:#22c55e;color:#fff;padding:0.7rem 1.25rem;border-radius:6px;text-decoration:none;">Pedir información por WhatsApp</a>
+    </div>
+  </section>
 </BaseLayout>

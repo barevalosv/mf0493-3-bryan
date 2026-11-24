@@ -1,38 +1,22 @@
 ---
-import '../styles/global.css';
-
-interface Props {
-  title: string;
-  description: string;
-}
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 const { title, description } = Astro.props;
-// BASE_URL es '/' en local y '/nombre-repo/' al publicar en GitHub Pages.
-const base = import.meta.env.BASE_URL;
 ---
-
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
   </head>
-  <body>
-    <header>
-      <p class="site-name">TODO: nombre de la empresa</p>
-      <nav>
-        <a href={base}>Inicio</a>
-        <a href={`${base}servicios/`}>Servicios</a>
-        <a href={`${base}blog/`}>Blog</a>
-      </nav>
-    </header>
-
-    <main>
+  <body style="margin:0;font-family:system-ui,sans-serif;color:#1e293b;background:#f8fafc;">
+    <Header />
+    <main style="max-width:960px;margin:2rem auto;padding:0 1.5rem;">
       <slot />
     </main>
-
-    <footer>TODO: datos de contacto</footer>
+    <Footer />
   </body>
 </html>
